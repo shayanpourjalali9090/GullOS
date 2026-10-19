@@ -37,9 +37,9 @@ _start:
     mov ebp, esp  ; Set up stack pointer
     push ebx            ; Push multiboot info structure pointer
     push eax            ; Push multiboot magic number
-    call kmaing         ; Call your C kernel
+    call kmaing         
     
     cli                 ; Disable interrupts
 .hang:
     hlt                 ; Halt the CPU
-    jmp .hang           ; Loop forever if we somehow continue
+    jmp .hang
